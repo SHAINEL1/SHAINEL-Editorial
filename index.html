@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090b10">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="SHAINEL Editorial — قراءة نقدية في تنوّع ألعاب كابكوم، ومستقبل سلاسلها، وازدواجية المعايير عند انتقاد Resident Evil.">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="كابكوم ليست Resident Evil فقط | SHAINEL">
+  <meta property="og:description" content="حين يتحوّل النجاح إلى تهمة: مقال تفاعلي عن تنوع كابكوم وازدواجية المعايير في صناعة الألعاب.">
+  <meta property="og:image" content="assets/images/social-card.webp">
+  <meta name="twitter:image" content="assets/images/social-card.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>كابكوم ليست Resident Evil فقط — SHAINEL Editorial</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/icons/shainel-mark.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/images/re9.webp" as="image">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#article">تجاوز المقدمة وانتقل إلى المقال</a>
+  <div class="scroll-progress" aria-hidden="true"><span id="readingProgress"></span></div>
+  <div class="ambient-dots" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <div class="header-shell">
+      <a class="site-brand" href="#top" aria-label="SHAINEL — الصفحة الرئيسية">
+        <svg class="brand-icon" viewBox="0 0 100 100" role="img" aria-label="رمز SHAINEL للألعاب">
+          <defs><linearGradient id="markGrad" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#eaf2ff"/><stop offset="1" stop-color="#7ea9ff"/></linearGradient></defs>
+          <path class="brand-mark-s" d="M68 22C57 15 33 19 29 33c-4 13 22 14 34 20s7 23-12 26c-11 2-21-2-27-7" fill="none" stroke="url(#markGrad)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M50 2 L56 12 L44 12 Z" fill="#6ca8ff"/><circle cx="88" cy="44" r="5.5" fill="none" stroke="#ffbf64" stroke-width="3"/><path d="M84 70l9 9m0-9l-9 9" stroke="#ec7077" stroke-width="3" stroke-linecap="round"/><rect x="5" y="48" width="11" height="11" rx="2" fill="none" stroke="#8bd5b5" stroke-width="3"/><circle cx="22" cy="16" r="3" fill="#ef9d60"/><circle cx="79" cy="17" r="3" fill="#8bd5b5"/>
+        </svg>
+        <span class="brand-word"><strong>SHAINEL</strong><small>GAMING EDITORIAL</small></span>
+      </a>
+      <nav class="desktop-nav" aria-label="التنقل الرئيسي">
+        <a href="#thesis">الفكرة</a><a href="#identity">التنوّع</a><a href="#evolution">Resident Evil</a><a href="#double-standard">المقارنة</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-button" id="captureToggle" title="وضع التصوير للثريد" aria-pressed="false" aria-label="تفعيل وضع التصوير"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="3"/><path d="M8 6l1.6-2h4.8L16 6"/></svg></button>
+        <button class="music-header-button" id="headerAudio" aria-label="تشغيل الموسيقى"><span class="sound-pulse"><i></i><i></i><i></i></span><span id="headerAudioLabel">استمع أثناء القراءة</span></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="chapter-rail" id="chapterRail" aria-label="فصول المقال">
+    <div class="rail-top"><span>ISSUE 001</span><span>01—07</span></div>
+    <a href="#thesis" data-section="thesis"><i></i><span>الجدل</span></a>
+    <a href="#identity" data-section="identity"><i></i><span>البصمة</span></a>
+    <a href="#library" data-section="library"><i></i><span>المكتبة</span></a>
+    <a href="#evolution" data-section="evolution"><i></i><span>التحوّلات</span></a>
+    <a href="#double-standard" data-section="double-standard"><i></i><span>المعيار</span></a>
+    <a href="#dmc" data-section="dmc"><i></i><span>العودة</span></a>
+    <a href="#finale" data-section="finale"><i></i><span>الخلاصة</span></a>
+    <div class="rail-bottom"><span id="railPercent">00%</span><span>READING</span></div>
+  </div>
+
+  <main id="article">
+    <section class="hero" id="hero" aria-labelledby="heroTitle">
+      <div class="hero-grain"></div><div class="hero-grid-lines" aria-hidden="true"></div>
+      <div class="hero-wrap frame">
+        <div class="hero-copy">
+          <div class="hero-meta reveal"><span class="gold-dot"></span><span>SHAINEL / AN ORIGINAL EDITORIAL</span><span>—</span><span>28 OCT 2026</span></div>
+          <div class="hero-logo-lockup reveal"><span>AN ESSAY ABOUT</span><img src="assets/images/capcom-logo.webp" alt="شعار كابكوم الرسمي"></div>
+          <div class="hero-tag reveal">THE CAPCOM PARADOX <span> / </span> العدد الأول</div>
+          <h1 id="heroTitle" class="reveal">كابكوم<br><span class="hero-gradient">ليست Resident Evil</span><br>فقط<span class="hero-period">.</span></h1>
+          <p class="hero-lead reveal">حين يصبح النجاح تهمة… وتُختزل واحدة من أكثر شركات الألعاب تنوعًا في سلسلة واحدة.</p>
+          <div class="hero-rule reveal"></div>
+          <p class="hero-description reveal">ليست هذه مرافعة عن شركة لا تخطئ؛ بل سؤال عن معيار نستخدمه مع الجميع، ثم نغيّره حين نصل إلى كابكوم.</p>
+          <div class="hero-ctas reveal"><a href="#thesis" class="primary-cta"><span>ابدأ القراءة</span><span aria-hidden="true">↓</span></a><button class="bare-cta" id="heroAudio"><span class="sound-glyph">♫</span> تشغيل أجواء القراءة</button></div>
+          <div class="hero-footnote reveal"><span>قراءة تحليلية</span><span class="tiny-divider"></span><span>٧ فصول</span><span class="tiny-divider"></span><span>صُمّمت للقراءة المتأنية</span></div>
+        </div>
+        <div class="hero-gallery" aria-label="أغلفة مختارة من مكتبة كابكوم">
+          <div class="hero-gallery-glow"></div>
+          <div class="hero-image hero-image-back one"><img src="assets/images/dmc5.webp" alt="غلاف Devil May Cry 5" fetchpriority="low"></div>
+          <div class="hero-image hero-image-back two"><img src="assets/images/mhw.webp" alt="غلاف Monster Hunter World" fetchpriority="low"></div>
+          <div class="hero-image hero-image-front"><img src="assets/images/re9.webp" alt="غلاف Resident Evil Requiem" fetchpriority="high"></div>
+          <div class="hero-image-caption"><span>MORE THAN ONE WORLD.</span><span>MORE THAN ONE WAY TO PLAY.</span></div>
+          <div class="vertical-stamp">THE CAPCOM QUESTION — BY SHAINEL</div>
+        </div>
+      </div>
+      <div class="hero-bottom frame"><span>AN INDEPENDENT GAMING ESSAY</span><span class="scroll-cue">SCROLL TO EXPLORE <b>↓</b></span></div>
+    </section>
+
+    <section class="article-section section-intro" id="thesis" data-chapter="01">
+      <div class="frame content-frame">
+        <div class="section-heading reveal"><span class="chapter-id">CHAPTER 01 / THE ACCUSATION</span><h2>متى صار النجاح <em>تهمة؟</em></h2><p class="section-deck">الاعتراض مشروع. لكن الاختزال ليس نقدًا.</p></div>
+        <div class="reading-grid"><div class="prose reveal">
+          <p class="drop-cap">كل فترة يرجع نفس الكلام: «كابكوم ما عندها إلا Resident Evil». تُصدر جزءًا جديدًا فيقال إنها تحلب السلسلة. تعيد بناء جزء كلاسيكي فيُقال إنها تعيد تدوير أفكارها. وفي المقابل، يُطرح السؤال المعتاد: أين Devil May Cry؟ أين Dino Crisis؟ وأين بقية عناوينها القديمة؟</p>
+          <p>أتفهّم تمامًا رغبة اللاعب في عودة سلسلة يحبها، بل أشارك هذا الشعور مع بعض العناوين. لكن هناك فرق كبير بين المطالبة بلعبة جديدة وبين الحكم على شركة كاملة بالإفلاس الإبداعي لأنها لا تتبع جدول الإصدارات الذي نريده نحن.</p>
+          <p>المفارقة أن بعض من ينتقدون كابكوم بهذا المنطق هم أنفسهم من يدافعون عن تركيز شركات أخرى على سلاسلها الأنجح، بحجة أن نجاح العنوان وجمهوره يبرّران استمراره. إذا كان هذا تبريرًا مقبولًا هناك، فلماذا يتحول عند Resident Evil إلى دليل على الحلب؟</p>
+          <p>قبل أن نُصدر الحكم، علينا أن نفصل بين ثلاثة أشياء كثيرًا ما تُخلط: <strong>تكرار الاسم، وتكرار التجربة، وتكرار الاستراتيجية التجارية.</strong> ليست جميعها شيئًا واحدًا.</p>
+        </div><aside class="sidebar-note reveal"><div class="eyebrow">THE CORE QUESTION</div><div class="big-quote">«هل نقيس الإبداع بعدد الأسماء… أم بالاختلاف الحقيقي بين ما نلعبه؟»</div><div class="note-foot">SHAINEL / 01</div></aside></div>
+        <div class="statement-band reveal"><span class="statement-kicker">الفكرة المركزية</span><p>امتلاك سلسلة ناجحة لا يلغي التنوع. والاستمرار في الاسم لا يعني بالضرورة الاستنساخ في التجربة.</p></div>
+      </div>
+    </section>
+
+    <section class="article-section identity-section" id="identity" data-chapter="02">
+      <div class="frame content-frame">
+        <div class="section-heading reveal"><span class="chapter-id">CHAPTER 02 / DESIGN DNA</span><h2>لكل استوديو بصمته.<br><em>لكن ليست كل البصمات متشابهة.</em></h2><p class="section-deck">المقارنة هنا ليست لتقليل قيمة الآخرين؛ بل لفهم معنى الاختلاف.</p></div>
+        <div class="prose narrow-prose reveal"><p>في ألعاب Rockstar مثل GTA وRed Dead Redemption، يمكن تمييز فلسفة واضحة في بناء العالم المفتوح، وتقديم الحوارات والمهمات، والتفاعل مع الشخصيات والبيئة. العالمان مختلفان جدًا، لكن توقيع الاستوديو حاضر.</p><p>ومع Naughty Dog، نلاحظ أسلوبًا سينمائيًا قائمًا على الرفقة بين الشخصيات والحوار أثناء الاستكشاف، وعلى التفاعل والتعاون في تجاوز العقبات. Uncharted وThe Last of Us ليستا اللعبة نفسها، لكن هناك لغة تصميم تجمعهما. هذه «الهوية» ليست عيبًا؛ وقد تكون سبب تميّز الاستوديو أصلًا.</p><p>أما كابكوم، فالأمر المثير أنها قادرة على الانتقال من فلسفة لعب إلى أخرى لا تشبهها تقريبًا: من مبارزة تنافسية تعتمد على الدقة بالإطارات، إلى صيد وحوش جماعي طويل المدى، إلى رعب يحاسبك على كل طلقة، إلى أكشن استعراضي يقيس إبداعك في القتال. هنا لا نتكلم عن تبديل العالم أو الشخصيات فقط؛ بل عن <strong>تبديل القواعد التي تحكم المتعة نفسها.</strong></p></div>
+        <div class="identity-comparison reveal"><div class="identity-side"><span class="eyebrow">RECOGNIZABLE LANGUAGE</span><strong>بصمة متكررة بين السلاسل</strong><p>السرد السينمائي، تصميم المهمات، أو منطق الاستكشاف يمكن أن يحمل توقيع استوديو واحد.</p><div class="side-tokens"><span>Rockstar</span><span>Naughty Dog</span></div></div><div class="versus-line">VS</div><div class="identity-side side-capcom"><span class="eyebrow">MULTIPLE PLAYABLE IDENTITIES</span><strong>هويات لعب مختلفة جذريًا</strong><p>كل نوع يضع اللاعب أمام قواعد وأنظمة ودوافع لا تشبه ما سبقها.</p><div class="side-tokens"><span>CAPCOM</span><span>Action</span><span>Horror</span><span>Hunting</span><span>Fighting</span></div></div></div>
+      </div>
+    </section>
+
+    <section class="article-section library-section" id="library" data-chapter="03">
+      <div class="frame wide-frame">
+        <div class="section-heading reveal"><span class="chapter-id">CHAPTER 03 / THE PLAYABLE LIBRARY</span><h2>شركة واحدة.<br><em>عوالم لا تشبه بعضها.</em></h2><p class="section-deck">تأمل الفارق بين طريقة اللعب، وليس مجرد اسم اللعبة على الغلاف.</p></div>
+        <div class="filter-row reveal" role="group" aria-label="تصفية ألعاب كابكوم"><button class="filter active" data-filter="all" aria-pressed="true">الكل <span>10</span></button><button class="filter" data-filter="action" aria-pressed="false">أكشن</button><button class="filter" data-filter="horror" aria-pressed="false">رعب</button><button class="filter" data-filter="strategy" aria-pressed="false">استراتيجية وتجريب</button><button class="filter" data-filter="other" aria-pressed="false">أنواع أخرى</button></div>
+        <div class="library-grid" id="libraryGrid">
+          <article class="game-tile reveal" data-genre="horror" style="--tile-accent:#cc6b74"><div class="tile-cover"><img src="assets/images/re9.webp" alt="Resident Evil Requiem" loading="lazy"></div><div class="tile-copy"><span class="tile-type">SURVIVAL HORROR / ACTION</span><h3>Resident Evil</h3><p>رعب، موارد محدودة، واستراتيجيات للنجاة تتبدّل من جيل إلى آخر.</p></div></article>
+          <article class="game-tile reveal" data-genre="action" style="--tile-accent:#9871e2"><div class="tile-cover"><img src="assets/images/dmc5.webp" alt="Devil May Cry 5" loading="lazy"></div><div class="tile-copy"><span class="tile-type">STYLISH ACTION</span><h3>Devil May Cry</h3><p>سرعة، كومبوهات، وتعبير شخصي داخل نظام قتال شديد العمق.</p></div></article>
+          <article class="game-tile reveal" data-genre="other" style="--tile-accent:#d8bd88"><div class="tile-cover"><img src="assets/images/mhw.webp" alt="Monster Hunter World" loading="lazy"></div><div class="tile-copy"><span class="tile-type">HUNTING / CO-OP</span><h3>Monster Hunter</h3><p>استعداد، تعلّم سلوك الوحوش، وتعاون مبني على المواجهات الطويلة.</p></div></article>
+          <article class="game-tile reveal" data-genre="other" style="--tile-accent:#f58c49"><div class="tile-cover"><img src="assets/images/sf6.webp" alt="Street Fighter 6" loading="lazy"></div><div class="tile-copy"><span class="tile-type">COMPETITIVE FIGHTING</span><h3>Street Fighter</h3><p>مواجهة لاعب ضد لاعب حيث القرار في اللحظة يغيّر نتيجة المباراة.</p></div></article>
+          <article class="game-tile reveal" data-genre="action" style="--tile-accent:#ddc18a"><div class="tile-cover"><img src="assets/images/onimusha.webp" alt="Onimusha: Way of the Sword" loading="lazy"></div><div class="tile-copy"><span class="tile-type">SWORD ACTION</span><h3>Onimusha</h3><p>مبارزات بالسيوف وخيال ياباني مظلم، وهوية مختلفة عن DMC.</p></div></article>
+          <article class="game-tile reveal" data-genre="other" style="--tile-accent:#dca55f"><div class="tile-cover"><img src="assets/images/dragons-dogma.webp" alt="Dragon’s Dogma II" loading="lazy"></div><div class="tile-copy"><span class="tile-type">ACTION ROLE-PLAYING</span><h3>Dragon’s Dogma</h3><p>مغامرة فانتازية مفتوحة تتشكّل من الاشتباك والاستكشاف ونظام الرفقاء.</p></div></article>
+          <article class="game-tile reveal" data-genre="strategy" style="--tile-accent:#a3d5e8"><div class="tile-cover"><img src="assets/images/pragmata.webp" alt="PRAGMATA" loading="lazy"></div><div class="tile-copy"><span class="tile-type">SCI-FI / ACTION PUZZLE</span><h3>PRAGMATA</h3><p>عنوان جديد يمزج الحركة مع حل الألغاز ضمن عالم خيال علمي.</p></div></article>
+          <article class="game-tile reveal" data-genre="strategy" style="--tile-accent:#eea58e"><div class="tile-cover"><img src="assets/images/kunitsu-gami.webp" alt="Kunitsu-Gami: Path of the Goddess" loading="lazy"></div><div class="tile-copy"><span class="tile-type">ACTION / STRATEGY</span><h3>Kunitsu-Gami</h3><p>قتال مباشر وتخطيط دفاعي بطابع فولكلوري ياباني فريد.</p></div></article>
+          <article class="game-tile reveal" data-genre="strategy" style="--tile-accent:#76bfdf"><div class="tile-cover"><img src="assets/images/exoprimal.webp" alt="Exoprimal" loading="lazy"></div><div class="tile-copy"><span class="tile-type">TEAM-BASED PvPvE</span><h3>Exoprimal</h3><p>مواجهات فرق ضد الديناصورات مع عناصر تنافسية وتعاونية.</p></div></article>
+          <article class="game-tile reveal" data-genre="horror" style="--tile-accent:#8893a6"><div class="tile-cover"><img src="assets/images/re1.webp" alt="Resident Evil 1996" loading="lazy"></div><div class="tile-copy"><span class="tile-type">CLASSIC SURVIVAL HORROR</span><h3>Resident Evil (1996)</h3><p>الكاميرات الثابتة والألغاز والذخيرة النادرة: نقطة انطلاق مختلفة.</p></div></article>
+        </div>
+        <div class="library-caption reveal"><span>01—10 / CAPCOM WORLDS</span><span>الصور من الأغلفة التي اختارها SHAINEL للمقال</span></div>
+      </div>
+    </section>
+
+    <section class="article-section evolution-section" id="evolution" data-chapter="04">
+      <div class="frame content-frame">
+        <div class="section-heading reveal"><span class="chapter-id">CHAPTER 04 / EVOLUTION OF AN ICON</span><h2>حتى Resident Evil<br><em>لم تبقَ كما هي.</em></h2><p class="section-deck">نفس الاسم. أربع محطات. طرق مختلفة لصناعة الخوف.</p></div>
+        <div class="prose narrow-prose reveal"><p>لو كان كل إصدار يحمل اسم Resident Evil مجرد نسخة من الذي قبله، لكانت تهمة التكرار أكثر وضوحًا. لكن تاريخ السلسلة يقول شيئًا أكثر تعقيدًا. جربت كابكوم تغيير الكاميرا، وإيقاع المواجهات، وتوزيع الرعب والأكشن، وحتى العلاقة بين اللاعب وموارده.</p></div>
+        <div class="evo-steps">
+          <article class="evo-step reveal"><div class="evo-number">01 <span>1996</span></div><div class="evo-art"><img src="assets/images/re1.webp" alt="غلاف Resident Evil الأصلي" loading="lazy"></div><div class="evo-copy"><span class="micro-label">THE FOUNDATION</span><h3>الخوف من المجهول</h3><p>كاميرات ثابتة، ألغاز، أبواب لا تعرف ما وراءها، وقرارات صعبة بشأن الموارد. كانت النجاة هي البطولة.</p></div></article>
+          <article class="evo-step reveal"><div class="evo-number">02 <span>2005 / 2023</span></div><div class="evo-art"><img src="assets/images/re4-remake.webp" alt="غلاف Resident Evil 4 Remake" loading="lazy"></div><div class="evo-copy"><span class="micro-label">THE REINVENTION</span><h3>حين تحرّكت الكاميرا</h3><p>Resident Evil 4 نقلت مركز الثقل إلى منظور الكتف والتصويب والمواجهات المباشرة؛ ثم أعادت كابكوم تقديمها برؤية حديثة في الريميك.</p></div></article>
+          <article class="evo-step reveal"><div class="evo-number">03 <span>2017</span></div><div class="evo-art"><img src="assets/images/re7.webp" alt="غلاف Resident Evil 7" loading="lazy"></div><div class="evo-copy"><span class="micro-label">THE RETURN TO FEAR</span><h3>الرعب من عين اللاعب</h3><p>الجزء السابع خفّض ضجيج الأكشن وأعاد الشعور بالضعف؛ منظور الشخص الأول لم يكن تبديل كاميرا فقط، بل تبديل إحساس كامل.</p></div></article>
+          <article class="evo-step reveal"><div class="evo-number">04 <span>2026</span></div><div class="evo-art"><img src="assets/images/re9.webp" alt="غلاف Resident Evil Requiem" loading="lazy"></div><div class="evo-copy"><span class="micro-label">TWO TEMPOS, ONE GAME</span><h3>الرعب والأكشن جنبًا إلى جنب</h3><p>Requiem تجمع بين تجربة Grace القائمة على النجاة وتجربة Leon الأكثر قتالية، وتتيح التبديل بين منظوري الشخص الأول والثالث لكل منهما. <a class="inline-source" href="https://www.playstation.com/en-sa/games/resident-evil-requiem/" target="_blank" rel="noopener noreferrer">المصدر ↗</a></p></div></article>
+        </div>
+        <div class="re-contrast reveal"><div class="contrast-photo"><img src="assets/images/re4-original.webp" alt="غلاف Resident Evil 4 الكلاسيكي" loading="lazy"></div><div class="contrast-copy"><span class="chapter-id">REMEMBER THE SHIFT</span><h3>التغيير قد يحدث<br>حتى داخل السلسلة الواحدة.</h3><p>بعض التحولات نجحت أكثر من غيرها، وبعضها أثار انقسامًا بين الجمهور. لكن مجرد اختلاف الآراء حولها يؤكد أنها لم تكن نسخًا متطابقة.</p></div></div>
+      </div>
+    </section>
+
+    <section class="article-section double-section" id="double-standard" data-chapter="05">
+      <div class="frame wide-frame">
+        <div class="section-heading reveal"><span class="chapter-id">CHAPTER 05 / THE DOUBLE STANDARD</span><h2>المشكلة ليست في الاستمرار.<br><em>المشكلة في المعيار.</em></h2><p class="section-deck">حين نتقبّل المنطق التجاري عند شركة، ثم نرفضه عند شركة أخرى.</p></div>
+        <div class="prose narrow-prose reveal"><p>لنأخذ المثال الأقرب إلى نقاشاتي مع محبي Tomb Raider: حين أنتقد تركيز Crystal Dynamics على السلسلة، يقال لي إن Lara Croft عنوان ناجح وله جمهوره؛ لذلك من الطبيعي أن تستثمر فيه الشركة. هذا دفاع مفهوم. لكن بالمبدأ نفسه، ألا يمكن أن يكون استمرار Resident Evil منطقيًا أيضًا؟</p><p>بل إن Tomb Raider: Legacy of Atlantis، إعادة التصور الجديدة للعبة الأولى، مقررة في 2027 بالتعاون بين Crystal Dynamics وFlying Wild Hog. وأنا لا أرى وجود ريميك مشكلة بحد ذاته؛ المشكلة أن يختلف حكمنا على الفكرة بحسب اسم الاستوديو المكتوب على الغلاف. <a class="inline-source" href="https://www.tombraider.com/news/video-games/pre-orders-are-open-for-tomb-raider-legacy-of-atlantis" target="_blank" rel="noopener noreferrer">المصدر ↗</a></p></div>
+        <div class="comparison-spotlight reveal"><div class="spotlight-text"><span class="micro-label">THE TOMB RAIDER TEST</span><h3>«لأن السلسلة ناجحة<br>ولها جمهورها»</h3><p>هذا المنطق يُستخدم لتبرير مواصلة الاستثمار في Tomb Raider. فلماذا لا يكون المبدأ نفسه صالحًا عندما نتكلم عن Resident Evil؟</p><div class="spotlight-punch">إذا تغيّر الحكم بتغيّر الشعار… فالمعيار يحتاج مراجعة.</div></div><div class="spotlight-covers"><img src="assets/images/tomb2013.webp" alt="Tomb Raider 2013" loading="lazy"><img src="assets/images/tomb2027.webp" alt="Tomb Raider Legacy of Atlantis 2027" loading="lazy"></div></div>
+        <div class="comparison-headline reveal"><span>IN THE SAME INDUSTRY</span><h3>شركات أخرى، وسلاسل مستمرة</h3><p>أمثلة توضيحية لا أحكام مطلقة: لكل استوديو إنتاجه وتاريخه، والمقارنة هنا مع سلوك السوق ومعايير الجمهور لا مع «جودة» الألعاب.</p></div>
+        <div class="studio-grid">
+          <article class="studio-card reveal"><div class="studio-head"><div class="studio-logo logo-bright"><img src="assets/images/logo-rockstar.webp" alt="شعار Rockstar Games" loading="lazy"></div><div><span class="micro-label">OPEN-WORLD SIGNATURE</span><h4>Rockstar Games</h4></div></div><div class="studio-covers"><img src="assets/images/gta5.webp" alt="غلاف GTA V" loading="lazy"><img src="assets/images/rdr2.webp" alt="غلاف Red Dead Redemption 2" loading="lazy"></div><p>بين GTA وRed Dead بصمة بارزة في بناء العالم والسرد والتفاعل. الاختلاف بين التجربتين حقيقي، وكذلك حضور مدرسة Rockstar في كليهما.</p></article>
+          <article class="studio-card reveal"><div class="studio-head"><div class="studio-logo logo-dark"><img src="assets/images/logo-naughtydog.webp" alt="شعار Naughty Dog" loading="lazy"></div><div><span class="micro-label">CINEMATIC NARRATIVE</span><h4>Naughty Dog</h4></div></div><div class="studio-covers"><img src="assets/images/uncharted4.webp" alt="غلاف Uncharted 4" loading="lazy"><img src="assets/images/tlou2.webp" alt="غلاف The Last of Us Part II" loading="lazy"></div><p>أسلوب سينمائي وحوارات الشخصيات المصاحبة والتفاعل بين الرفاق. الاستوديو يملك لغة تصميم مميزة، وهذا ليس عيبًا عليه.</p></article>
+          <article class="studio-card reveal"><div class="studio-head"><div class="studio-logo logo-paper"><img src="assets/images/logo-guerrilla.webp" alt="شعار Guerrilla" loading="lazy"></div><div><span class="micro-label">FRANCHISE CONTINUITY</span><h4>Guerrilla</h4></div></div><div class="studio-covers"><img src="assets/images/horizon1.webp" alt="غلاف Horizon Zero Dawn Remastered" loading="lazy"><img src="assets/images/horizon2.webp" alt="غلاف Horizon Forbidden West" loading="lazy"></div><p>استمرار Horizon وإعادة تقديم جزئها الأول إصدارًا محسّنًا يوضح كيف تستثمر الشركات في سلسلة لها جمهور واضح.</p></article>
+          <article class="studio-card reveal"><div class="studio-head"><div class="studio-logo logo-dark"><img src="assets/images/logo-cdpr.webp" alt="شعار CD Projekt RED" loading="lazy"></div><div><span class="micro-label">THE LONG LIFE OF A HIT</span><h4>CD Projekt RED</h4></div></div><div class="studio-covers single-cover"><img src="assets/images/witcher3.webp" alt="غلاف The Witcher 3 Complete Edition" loading="lazy"><div class="mini-editorial"><strong>THE<br>WITCHER<br>3</strong><span>LONG-TAIL SUCCESS</span></div></div><p>تستمر The Witcher 3 عبر الإصدارات والتحديثات وتوسّع حضور العلامة. النجاح الطويل ليس وحده دليلًا على غياب الأفكار.</p></article>
+          <article class="studio-card reveal"><div class="studio-head"><div class="studio-logo logo-dark"><img src="assets/images/logo-konami.webp" alt="شعار Konami" loading="lazy"></div><div><span class="micro-label">AN IP IN REVIVAL</span><h4>Konami</h4></div></div><div class="studio-covers"><img src="assets/images/sh2.webp" alt="غلاف Silent Hill 2 Remake" loading="lazy"><img src="assets/images/shf.webp" alt="غلاف Silent Hill f" loading="lazy"></div><p>كونامي أعادت تنشيط Silent Hill بمشاريع مختلفة، وأعلن منتج السلسلة طموحًا لإصدار لعبة جديدة كل سنة؛ هدف معلن لا جدول مضمون. <a class="inline-source" href="https://www.gamesradar.com/games/silent-hill/konami-wants-silent-hill-to-have-an-annual-release-of-new-games-and-its-already-working-on-many-unannounced-projects/" target="_blank" rel="noopener noreferrer">المصدر ↗</a></p></article>
+          <article class="studio-card reveal"><div class="studio-head"><div class="studio-logo logo-paper"><img src="assets/images/logo-crystal.webp" alt="شعار Crystal Dynamics" loading="lazy"></div><div><span class="micro-label">THE COMPARISON THAT MATTERS</span><h4>Crystal Dynamics</h4></div></div><div class="studio-covers"><img src="assets/images/tomb2013.webp" alt="غلاف Tomb Raider 2013" loading="lazy"><img src="assets/images/tomb2027.webp" alt="غلاف Tomb Raider: Legacy of Atlantis" loading="lazy"></div><p>المقارنة هنا شخصية ومباشرة: من يدافع عن استمرار Tomb Raider لأنها ناجحة، عليه أن يمنح Resident Evil المنطق نفسه.</p></article>
+        </div>
+        <div class="double-quote reveal"><span class="chapter-id">A QUESTION OF CONSISTENCY</span><p>«إما أن استمرار السلسلة الناجحة قرار مفهوم لدى الجميع، أو أننا ننتقي مَن نلومه ومَن نعذره.»</p><small>— SHAINEL</small></div>
+      </div>
+    </section>
+
+    <section class="article-section dmc-section" id="dmc" data-chapter="06">
+      <div class="frame content-frame">
+        <div class="section-heading reveal"><span class="chapter-id">CHAPTER 06 / WHAT ABOUT THE CLASSICS?</span><h2>وماذا عن <em>Devil May Cry</em><br>والعناوين الغائبة؟</h2><p class="section-deck">وجود جمهور لجزء جديد لا يحوّل كل تأجيل إلى إفلاس إبداعي.</p></div>
+        <div class="dmc-feature reveal"><div class="dmc-visuals"><img src="assets/images/dmc1.webp" alt="غلاف Devil May Cry الأول" loading="lazy"><img src="assets/images/dmc5.webp" alt="غلاف Devil May Cry 5" loading="lazy"></div><div class="dmc-text prose"><p>من حق جمهور Devil May Cry أن يطالب بجزء سادس، ومن حق جمهور Dino Crisis أن يتمنى عودة السلسلة. وأنا شخصيًا أرى أن إعادة بناء Devil May Cry الأولى يمكن أن تكون فرصة ضخمة لو نُفّذت بالشكل المناسب.</p><p>لكن يجب أن نتذكر المسار الفعلي: بعد Devil May Cry 4، ذهبت كابكوم إلى إعادة تصور مختلفة مع Ninja Theory عام 2013، ثم عادت إلى السلسلة الرئيسية مع Devil May Cry 5 عام 2019، وقدّم الخامس نهاية مهمة لصراع دانتي وفيرجل. وهذا لا يمنع العودة مستقبلًا، لكنه يفسّر لماذا قد يراها البعض خاتمة مرضية لمسار قصصي طويل.</p><p>والطلب الجماهيري عامل مهم في قرار عودة أي سلسلة، لكنه ليس وحده خطة إنتاج كاملة. الاستوديو يحتاج فكرة تستحق الوجود، وفريقًا، وميزانية، وتوقيتًا مناسبًا. <strong>النجاح يفتح الباب لاحتمال جزء جديد، لكنه لا يُلزم الشركة بإنتاجه فورًا.</strong></p></div></div>
+        <div class="prose narrow-prose after-dmc reveal"><p>الأهم أن كابكوم لم تتوقف عن إحياء عناوينها: عودة Onimusha مع Way of the Sword، وصدور PRAGMATA كعنوان جديد في 2026، مثالان حديثان يناقضان فكرة أن الشركة «لا تعرف إلا Resident Evil». ويمكنك أن تنتقد نوعية كل لعبة أو نجاحها، لكن لا يمكنك تجاهل وجودها. <a class="inline-source" href="https://www.capcom.co.jp/ir/english/news/html/e260507.html" target="_blank" rel="noopener noreferrer">PRAGMATA ↗</a> <a class="inline-source" href="https://www.capcom.co.jp/ir/english/news/html/e260907.html" target="_blank" rel="noopener noreferrer">Onimusha ↗</a></p></div>
+      </div>
+    </section>
+
+    <section class="article-section finale-section" id="finale" data-chapter="07">
+      <div class="frame content-frame">
+        <div class="section-heading reveal"><span class="chapter-id">CHAPTER 07 / THE VERDICT</span><h2>ليس كل استمرار حلبًا.<br><em>وليس كل غياب إهمالًا.</em></h2></div>
+        <div class="prose narrow-prose reveal"><p>هل كابكوم فوق النقد؟ طبعًا لا. من حق اللاعب أن ينتقد أداء الألعاب، وأسعارها، وقرارات التطوير، وأن يطالب بإحياء عنوان منسي. لكن إذا كان نقدنا يريد أن يكون منصفًا، فعليه أن يفرّق بين قوة العلامة التجارية وبين حدود خيال من يصنعها.</p><p>كابكوم تملك Resident Evil، نعم. لكنها تملك أيضًا Monster Hunter وStreet Fighter وDevil May Cry وDragon’s Dogma وOnimusha. وقدّمت تجارب مثل Kunitsu-Gami وExoprimal وPRAGMATA. هذه ليست قائمة أسماء تُكتب لمجرد الإكثار؛ إنها ألعاب تختلف في طريقة اللعب، وإيقاعها، والجمهور الذي تخاطبه، والمهارات التي تطلبها من اللاعب.</p><p>أحيانًا أسمع مطالبات متناقضة: نريد ألعابًا جديدة، وريميكات، وأجزاء كلاسيكية تعود، وعناوين جديدة كليًا؛ ثم عندما تركّز الشركة على أكثر سلاسلها نجاحًا تصبح متهمة بأنها فقدت الشجاعة. لا توجد شركة تستطيع إعطاء جميع الجماهير كل ما تريد في الوقت نفسه. وغياب لعبة نحبها لا يُلغي عشر ألعاب أخرى صُنعت فعلًا.</p><p>لهذا، حين يُقال إن كابكوم «ما عندها إلا Resident Evil»، أجد أن السؤال الأدق ليس: كم جزءًا أصدرت من السلسلة؟ بل: <strong>كم نوعًا مختلفًا من التجارب استطاعت تقديمه بينما تواصل تطويرها؟</strong></p></div>
+        <div class="final-pullquote reveal"><div class="final-quote-mark">“</div><p>انتقد كابكوم كما تشاء.<br>لكن لا تختزل كل ما تصنعه<br>في اسم واحد.</p><span>SHAINEL / FINAL WORD</span></div>
+        <div class="closing-prose reveal"><p>إذا كان النجاح والجمهور يبرّران استمرار Tomb Raider أو GTA أو Silent Hill، فلا بد أن نطبّق المعيار ذاته على Resident Evil. وبعد ذلك، نناقش جودة كل لعبة على حدة بدل أن نعتبر مجرد وجودها إدانة.</p><p class="closing-last">لأن اختلاف الأسماء لا يصنع التنوع وحده… <strong>بل اختلاف التجربة.</strong></p></div>
+        <div class="end-signature reveal"><img class="shainel-emblem" src="assets/icons/shainel-emblem.svg" alt="شعار SHAINEL بحرف S محاط برموز PlayStation وXbox وNintendo وPC Gaming"><div class="signature-rule"></div><span>WRITTEN & CURATED BY</span><strong>SHAINEL</strong><small>NOT AFFILIATED WITH CAPCOM OR ANY FEATURED STUDIO</small><div class="footer-actions"><button id="copyQuote" class="secondary-cta">نسخ الخلاصة <span aria-hidden="true">↗</span></button><button id="shareArticle" class="secondary-cta">مشاركة المقال على X <span aria-hidden="true">↗</span></button></div></div>
+      </div>
+    </section>
+
+    <section class="sources-section" id="sources"><div class="frame content-frame"><details class="sources-drawer"><summary><span>المراجع والمصادر</span><span>EDITORIAL SOURCES / 2026 <b aria-hidden="true">+</b></span></summary><div class="sources-body"><p>هذه صفحة رأي نقدي مستقلة. المعلومات القابلة للتحقق حول الألعاب وإعلاناتها مستندة إلى المصادر التالية، بينما التقييمات والمقارنات تعبّر عن رأي الكاتب.</p><ol><li><a href="https://www.playstation.com/en-sa/games/resident-evil-requiem/" target="_blank" rel="noopener noreferrer">PlayStation — Resident Evil Requiem: الشخصيات والمنظوران</a></li><li><a href="https://blog.playstation.com/2026/01/29/resident-evil-requiem-interview-chainsaws-reinvented-zombies-fear-balancing-and-more/" target="_blank" rel="noopener noreferrer">PlayStation Blog — مقابلة مطوري Requiem</a></li><li><a href="https://www.capcom.co.jp/ir/english/news/html/e260507.html" target="_blank" rel="noopener noreferrer">CAPCOM — بيان PRAGMATA الرسمي (2026)</a></li><li><a href="https://www.capcom.co.jp/ir/english/news/html/e260907.html" target="_blank" rel="noopener noreferrer">CAPCOM — بيان Onimusha الرسمي (2026)</a></li><li><a href="https://www.tombraider.com/news/video-games/pre-orders-are-open-for-tomb-raider-legacy-of-atlantis" target="_blank" rel="noopener noreferrer">Tomb Raider — موعد Legacy of Atlantis ومطوروها</a></li><li><a href="https://www.gamesradar.com/games/silent-hill/konami-wants-silent-hill-to-have-an-annual-release-of-new-games-and-its-already-working-on-many-unannounced-projects/" target="_blank" rel="noopener noreferrer">GamesRadar+ — تصريحات منتج Silent Hill عن الإصدارات السنوية</a></li><li><a href="https://www.capcom.co.jp/ir/english/data/pdf/annual/2025/annual_2025_01.pdf" target="_blank" rel="noopener noreferrer">Capcom — التقرير السنوي لعام 2025 ومحفظة الملكيات الفكرية</a></li></ol><p class="rights-note">جميع أسماء الألعاب والشعارات والأغلفة ملك لأصحابها. استخدام الصور هنا لأغراض التعليق والتحليل، ولا يعني تأييد الشركات أو ارتباطها بالمشروع. الموسيقى المرفقة يوفّرها صاحب الصفحة، ويجب التأكد من حقوق نشرها قبل إتاحتها علنًا.</p></div></details></div></section>
+  </main>
+
+  <footer class="site-footer"><div class="frame"><div class="footer-main"><a href="#top" class="footer-brand">SHAINEL<span>®</span></a><p>CURATED WORDS. DISTINCT WORLDS.</p><a href="#top" class="to-top">العودة للأعلى ↑</a></div><div class="footer-bottom"><span>© 2026 SHAINEL EDITORIAL</span><span>INDEPENDENT GAMING COMMENTARY · ISSUE 001</span></div></div></footer>
+
+  <div class="audio-dock" id="audioDock" aria-label="مشغل موسيقى القراءة"><div class="audio-orb"><span class="sound-pulse"><i></i><i></i><i></i></span></div><div class="audio-info"><strong>Serenity</strong><span>RESIDENT EVIL 4 · READING AMBIENCE</span></div><button class="audio-play" id="dockAudio" aria-label="تشغيل الموسيقى" aria-pressed="false"><svg class="play-svg" viewBox="0 0 24 24"><path d="m8 5 11 7-11 7z"/></svg><svg class="pause-svg" viewBox="0 0 24 24"><path d="M8 5v14M16 5v14"/></svg></button><div class="audio-volume"><label for="volumeRange" class="sr-only">مستوى صوت الموسيقى</label><input type="range" id="volumeRange" min="0" max="35" value="16" aria-label="مستوى صوت الموسيقى من صفر إلى 35 بالمئة"><span id="volumeValue">16%</span></div><button class="dock-close" id="hideAudio" aria-label="إخفاء مشغل الموسيقى">×</button></div>
+  <button class="dock-reopen" id="reopenAudio" aria-label="إظهار مشغل الموسيقى">♫</button>
+  <audio id="readingAudio" preload="none" loop><source src="assets/audio/serenity.mp3" type="audio/mpeg">متصفحك لا يدعم تشغيل الموسيقى.</audio>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
